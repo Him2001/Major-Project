@@ -1,6 +1,5 @@
 from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
-import time
 import os
 
 client_token = os.getenv('clent_token')
@@ -40,10 +39,9 @@ def main(bot,update):
    demo4(bot,update)
    aio.send('fan-feed',0)
 
-while True:
-  u = Updater(bot_token,use_context = True)
-  dp = u.dispatcher
-  dp.add_handler(MessageHandler(Filters.text,main))
-  u.start_polling()
-  u.idle()
-  time.sleep(2)
+
+u = Updater(bot_token,use_context = True)
+dp = u.dispatcher
+dp.add_handler(MessageHandler(Filters.text,main))
+u.start_polling()
+u.idle()

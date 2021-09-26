@@ -3,7 +3,6 @@ from Adafruit_IO import Client
 import os
 
 client_token = os.getenv('clent_token')
-client_id = os.getenv('clent_id')
 telegram_bot_token = os.getenv('telegram_bot_token')
 
 aio = Client('Him01',client_token)

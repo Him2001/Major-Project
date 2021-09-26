@@ -2,10 +2,10 @@ from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
 import os
 
-client_token = os.getenv('clent_token')
+
 telegram_bot_token = os.getenv('telegram_bot_token')
 
-aio = Client('Him01',client_token)
+aio = Client('Him01','aio_lYJn407OMlZm5ntJUegWsQjVCY5H')
 bot_token = telegram_bot_token 
  
 def demo1(bot,update):

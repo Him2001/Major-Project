@@ -1,7 +1,13 @@
 from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
+
 client_token = os.getenv('clent_token')
-aio = Client('Him01',client_token)
+client_id = os.getenv('clent_id')
+telegram_bot_token = os.getenv('telegram_bot_token')
+
+aio = Client(client_id,client_token)
+bot_token = telegram_bot_token
+
 def demo1(bot,update):
   chat_id = bot.message.chat_id
   bot.message.reply_text('Turning on Light')
@@ -31,8 +37,8 @@ def main(bot,update):
   if d == "Turn off fan":
    demo4(bot,update)
    aio.send('fan-feed',0)
-telegram_bot_token = os.getenv('telegram_bot_token')
-bot_token = telegram_bot_token
+
+
 u = Updater(bot_token,use_context = True)
 dp = u.dispatcher
 dp.add_handler(MessageHandler(Filters.text,main))

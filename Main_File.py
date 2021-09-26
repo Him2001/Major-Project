@@ -31,7 +31,7 @@ def main(bot,update):
    demo1(bot,update)
    aio.send('light-feed',1)
   if b == "Turn off light":
-   demo2(bot,update)
+   demo2(bot,update) 
    aio.send('light-feed',0)
   if c == "Turn on fan":
    demo3(bot,update)

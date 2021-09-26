@@ -21,7 +21,7 @@ def demo4(bot,update):
   chat_id = bot.message.chat_id
   bot.message.reply_text('Turning off Fan')
 def main(bot,update):
-  a = bot.message.text
+  a = bot.message.text 
   b = bot.message.text
   c = bot.message.text
   d = bot.message.text

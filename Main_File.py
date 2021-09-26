@@ -3,7 +3,7 @@
 
 from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
-aio = Client('Him01','aio_tWXf30872svwYycj3ylJFzNxN5ZW')
+aio = Client('Him01','aio_cOQG36RWcWSkvIeKprfsibhyyttq')
 def demo1(bot,update):
   chat_id = bot.message.chat_id
   bot.message.reply_text('Turning on Light')

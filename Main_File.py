@@ -1,6 +1,7 @@
 from telegram.ext import Updater, MessageHandler, Filters
 from Adafruit_IO import Client
 import time
+import os
 
 client_token = os.getenv('clent_token')
 client_id = os.getenv('clent_id')
@@ -45,4 +46,4 @@ while True:
   dp.add_handler(MessageHandler(Filters.text,main))
   u.start_polling()
   u.idle()
-  time.sleep(30)
+  time.sleep(2)

@@ -7,7 +7,7 @@ client_id = os.getenv('clent_id')
 telegram_bot_token = os.getenv('telegram_bot_token')
 
 aio = Client(client_id,client_token)
-bot_token = telegram_bot_token
+bot_token = telegram_bot_token 
 
 def demo1(bot,update):
   chat_id = bot.message.chat_id
